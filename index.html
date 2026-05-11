@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>010 — West Hills 8 Ball · Summer 2026 Schedule</title>
+<style>
+  :root {
+    --spm-primary: #ea002a;
+    --spm-accent:  #0031a1;
+    --bg: #f3f3f3;
+    --text: #1a1a1a;
+    --muted: #6b7280;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { font-family: system-ui, -apple-system, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+  .header {
+    background: linear-gradient(135deg, var(--spm-primary), var(--spm-accent));
+    color: #fff; padding: 16px 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    text-align: center;
+  }
+  .header h1 { font-size: clamp(1.1rem, 1rem + 0.8vw, 1.5rem); font-weight: 900; letter-spacing: -0.01em; }
+  .header .sub { font-size: 0.85rem; opacity: 0.9; margin-top: 2px; font-weight: 500; font-style: italic; }
+  .actions {
+    max-width: 1000px; margin: 12px auto 0; padding: 0 16px;
+    display: flex; gap: 8px; justify-content: center; flex-wrap: wrap;
+  }
+  .btn {
+    background: var(--spm-accent); color: #fff; text-decoration: none;
+    padding: 8px 16px; border-radius: 999px;
+    font-size: 0.85rem; font-weight: 700;
+  }
+  .btn:hover { background: #0046cc; }
+  .btn.outline { background: #fff; color: var(--text); border: 1.5px solid #d1d5db; }
+  .btn.outline:hover { background: #f5f5f5; }
+  .pdf-wrap {
+    max-width: 1000px; margin: 14px auto 24px; padding: 0 16px;
+  }
+  .pdf-frame {
+    width: 100%; height: 85vh; min-height: 600px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .hint {
+    text-align: center; color: var(--muted);
+    font-size: 0.8rem; margin: 8px 0 0;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>010 — West Hills 8 Ball</h1>
+  <div class="sub">Summer 2026 · Monday 6:30pm</div>
+</div>
+
+<div class="actions">
+  <a class="btn" href="schedule.pdf" target="_blank" rel="noopener">Open PDF in new tab</a>
+  <a class="btn outline" href="schedule.pdf" download>Download</a>
+</div>
+
+<div class="pdf-wrap">
+  <!-- iframe is the most reliable PDF embed across desktop + mobile;
+       browsers that can't render inline (older iOS Safari) fall back
+       to showing the link, which the buttons above already cover. -->
+  <iframe class="pdf-frame" src="schedule.pdf#toolbar=1&navpanes=0&view=FitH" title="Division 010 Schedule"></iframe>
+</div>
+
+<p class="hint">If the PDF doesn’t load above, use the Open or Download buttons.</p>
+
+</body>
+</html>
